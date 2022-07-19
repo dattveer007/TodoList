@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoAPP</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script defer src="notes.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/cdfe55299a.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h1>To Do Application</h1>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            <section id="row11">
+                <h2 id="heading1">Welcome to To Do Application App </h2>
+                <!-- <div>
+                    <input id="searchbar" type="text" placeholder="Search Notes">
+                </div> -->
+            </section>
+            <form id="row12" action="">
+                <h4>Add a Category</h4>
+                <select name="category" id="category">
+                    <option default>Choose a category</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <h4>Add Description</h4>
+                <textarea name="textarea" id="text" cols="30" rows="5"></textarea>
+                <h4>Add Due Date</h4>
+                <input type="date">
+                <section>
+                    <button class="addBtn">Add Task</button>
+                    <button class="delBtn">Delete Task</button>
+                </section>
+            </form>
+        </div>
+
+        <div>
+            <section id="row21">
+                <h2>
+                    Your Tasks
+                </h2>
+            </section>
+            <section id="row22">
+                <p id="nonotes" style="display: none;">
+                    Nothing to show. Use "Add Task" section to add tasks.
+                </p>
+                <div class="card">
+                    <input type="checkbox" name="" id="">
+                    <section>
+                        <h3>Why not add a task?</h3>
+                        <p>MAY 2,2019</p>
+                    </section>
+                    <div class="category-div">School</div>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
