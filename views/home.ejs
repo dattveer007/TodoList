@@ -31,21 +31,22 @@
                     <input id="searchbar" type="text" placeholder="Search Notes">
                 </div> -->
             </section>
-            <form id="row12" action="">
+            <form id="row12" action="create-contact" method="post">
                 <h4>Add a Category</h4>
-                <select name="category" id="category">
+                <select  name="category"id="category">
                     <option default>Choose a category</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work" >Work</option>
+                    <option value="School" >School</option>
+                    <option value="Cleaning" >Cleaning</option>
+                    <option value="Other" >Other</option>
                 </select>
                 <h4>Add Description</h4>
-                <textarea name="textarea" id="text" cols="30" rows="5"></textarea>
+                <textarea name="description" id="text" cols="30" rows="5" required></textarea>
                 <h4>Add Due Date</h4>
-                <input type="date">
+                <input type="date" name="date" required>
                 <section>
-                    <button class="addBtn">Add Task</button>
-                    <button class="delBtn">Delete Task</button>
+                    <button class="addBtn" type="submit">Add Task</button>
                 </section>
             </form>
         </div>
@@ -57,17 +58,17 @@
                 </h2>
             </section>
             <section id="row22">
-                <p id="nonotes" style="display: none;">
-                    Nothing to show. Use "Add Task" section to add tasks.
-                </p>
+                <% for( let i of task_list){%>
                 <div class="card">
                     <input type="checkbox" name="" id="">
                     <section>
-                        <h3>Why not add a task?</h3>
-                        <p>MAY 2,2019</p>
+                        <h3><%=i.description%></h3>
+                        <p><%=i.date%></p>
                     </section>
-                    <div class="category-div">School</div>
+                    <div class="category-div"><%=i.category%></div>
+                    <a href="/delete/?id=<%=i.id%>"><button class="delBtn">Delete</button></a>
                 </div>
+                <%}%>
                 
             </section>
         </div>

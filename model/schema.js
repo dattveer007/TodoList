@@ -1,6 +1,6 @@
 const mongo=require('mongoose');
 const schema=new mongo.Schema({
-    Description:{
+    description:{
         type:String,
     },
     category:{

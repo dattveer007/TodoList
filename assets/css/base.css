@@ -100,14 +100,15 @@ main:first-child {
     font-family: 'Open Sans';
 }
 
-#row12 button {
-    padding: 2vh 2vw;
+button {
+    padding: 1vh 1vw;
     /* background: #0686e9; */
     border-radius:5px;
     color: white;
     font-family: 'Open Sans';
     font-size: 14px;
     border: none;
+    margin-left: 1vw;
 }
 
 #row21 {
